@@ -6,6 +6,8 @@ private int id;
 private String title;
 private String content;
 private String writer;
+
+
 @Override
 public String toString() {
 	return "Bbs3VO [bbs_no=" + row_no + ", id=" + id + ", title=" + title + ", content=" + content + ", writer="

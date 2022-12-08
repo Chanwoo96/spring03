@@ -23,7 +23,7 @@
 
 		$('#b1').click(function() {
 			$.ajax({
-				url : "bbsList",
+				url : "bbsAll",
 				success : function(x) {
 					$('#result').html(x)
 				}
@@ -34,8 +34,7 @@
 			$.ajax({
 				url : "bbsList2",
 				data : {
-					start : 1,
-					end : 5
+					page:1
 				},
 				success : function(x) {
 					$('#result').html(x)
@@ -46,8 +45,7 @@
 			$.ajax({
 				url : "bbsList2",
 				data : {
-					start : 6,
-					end : 10
+					page : 2
 				},
 				success : function(x) {
 					$('#result').html(x)
@@ -58,7 +56,7 @@
 </script>
 <body>
 	<h1>게시물 목록</h1>
-	<button id="b1">페이징 연습 (1~5)</button>
+	<button id="b1">페이징고급화</button>
 	<button id="b2">페이징 연습 (1~5)</button>
 	<button id="b3">페이징 연습 (6~10)</button>
 	<div id="result"></div>

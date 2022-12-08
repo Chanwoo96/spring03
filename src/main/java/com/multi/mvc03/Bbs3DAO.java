@@ -16,4 +16,11 @@ SqlSessionTemplate my;
 	public List<Bbs3VO> list2(PageVO vo) {
 		return	my.selectList("bbs3.list2",vo);
 	}
+	//1208 페이징 고급화
+	public List<Bbs3VO> all(PageVO vo) {
+		return	my.selectList("bbs3.all",vo);
+	}
+	public int count() {
+		return my.selectOne("bbs3.count");
+	}
 }

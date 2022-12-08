@@ -5,6 +5,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="resources/js/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		 $.ajax({
+			url : "pagepage",
+			success : function(x) {
+				$('#pages').html(x)
+			}
+		}) 
+		$.ajax({
+			url : "bookpage",
+			data : {page : 1},
+			success : function(x) {
+				$('#result').html(x)
+			}
+		})
+		
+	})//start
+</script>
 </head>
 <body>
 <img src="resources/img/naver.png">
@@ -19,6 +43,11 @@
 <a href="all2">
 	<button>전체 검색 요청</button>
 </a>
+<hr>
+<div id="pages">
+</div>
+<div id="result">
+</div>
 <hr>
 <h3>북마크 추가</h3>
 <form action="insert.do">

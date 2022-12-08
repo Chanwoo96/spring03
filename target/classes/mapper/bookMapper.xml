@@ -17,6 +17,16 @@
 	<select id="one" parameterType="bookVO" resultType="bookVO">
 		select * from book where id = #{id}
 	</select>
+	<select id="all2" parameterType="pageVO" resultType="bookVO">
+	select * from(
+	select row_number() over (order by id desc) as row_no,
+	b.* 
+	from book b ) as b2
+	 where row_no between #{start} and #{end} 
+	</select>
+	<select id="count" resultType="Integer">
+	select count(*) from book
+	</select>
 </mapper>
 
 
