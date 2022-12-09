@@ -4,6 +4,9 @@
 	<insert id="create" parameterType="bbsVO"  >
 		insert into bbs values (null, #{title}, #{content}, #{writer})
 	</insert>
+	<select id="all" resultType="bbsVO">
+		select * from bbs
+	</select>
 </mapper>
 
 

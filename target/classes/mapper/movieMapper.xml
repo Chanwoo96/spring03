@@ -4,5 +4,7 @@
 	<insert id="insert" parameterType="movieVO" useGeneratedKeys="true" keyProperty="movie_id">
 	insert into MOVIE values (null, #{title}, #{img}, #{genre}, #{running_time}, #{link})
 	</insert>
-	
+	<select id="all" resultType="MovieVO">
+		select * from movie
+	</select>
 </mapper>

@@ -13,7 +13,7 @@ $(function() {
 			url : "json.jsp",
 			dataType : "json",
 			success : function(json) {
-				alert(json.id+" "+json.pw+" "+json.name)
+				alert(json['id']+" "+json.pw+" "+json.name)
 			}//success function
 		})//ajax
 	})//b1click

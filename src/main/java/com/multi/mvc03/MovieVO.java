@@ -5,7 +5,7 @@ public class MovieVO {
 	private String title;
 	private String img;
 	private String genre;
-	private String running_time;
+	private int running_time;
 	private String link;
 	
 	public String getMovie_id() {
@@ -32,10 +32,10 @@ public class MovieVO {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-	public String getRunning_time() {
+	public int getRunning_time() {
 		return running_time;
 	}
-	public void setRunning_time(String running_time) {
+	public void setRunning_time(int running_time) {
 		this.running_time = running_time;
 	}
 	public String getLink() {
