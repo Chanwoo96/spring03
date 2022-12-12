@@ -8,12 +8,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BbsDAO {
-@Autowired
-SqlSessionTemplate my;
-	public void insert(Bbs2VO vo) {
-		my.insert("bbs2.create",vo);
+	
+	@Autowired
+	SqlSessionTemplate my;
+
+	public int insert(BbsVO vo) {
+		return my.insert("bbs.create", vo);
 	}
+
 	public List<BbsVO> all() {
-	return	my.selectList("bbs.all");
+		return my.selectList("bbs.all");
 	}
 }

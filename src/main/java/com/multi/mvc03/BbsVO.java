@@ -2,16 +2,16 @@ package com.multi.mvc03;
 
 public class BbsVO {
 
-	private String id;
+	private String bbsid;
 	private String title;
 	private String content;
 	private String writer;
 	
-	public String getId() {
-		return id;
+	public String getBbsd() {
+		return bbsid;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setBbsid(String id) {
+		this.bbsid = id;
 	}
 	public String getTitle() {
 		return title;
@@ -34,7 +34,7 @@ public class BbsVO {
 	
 	@Override
 	public String toString() {
-		return "BbsVO [id=" + id + ", title=" + title + ", content=" + content + ", writer=" + writer + "]";
+		return "BbsVO [id=" + bbsid + ", title=" + title + ", content=" + content + ", writer=" + writer + "]";
 	}
 	
 	

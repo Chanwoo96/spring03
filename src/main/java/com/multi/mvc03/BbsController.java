@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class BbsController {
 	@Autowired
-	BbsDAO dao;
+	Bbs2DAO dao;
 	
 	@RequestMapping("insert6")
 	public void	insert(Bbs2VO bbs2VO,HttpServletRequest request,MultipartFile file,Model model) throws Exception{

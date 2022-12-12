@@ -53,7 +53,7 @@ public class JSONController {
 	@RequestMapping("jsonResponse3")
 	@ResponseBody
 	public BbsVO json3(BbsVO vo) {
-		vo.setId("naver");
+		vo.setBbsid("naver");
 		vo.setTitle("naver");
 		vo.setContent("http://naver.com");
 		vo.setWriter("resources/img/naver.png");
@@ -66,7 +66,7 @@ public class JSONController {
 		BbsVO vo;
 		for (int i = 0; i < 100; i++) {
 			vo = new BbsVO();
-			vo.setId("naver");
+			vo.setBbsid("naver");
 			vo.setTitle("naver");
 			vo.setContent("http://naver.com");
 			vo.setWriter("resources/img/naver.png");
